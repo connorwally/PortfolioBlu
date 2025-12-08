@@ -1,8 +1,17 @@
-﻿export function Button() {
-    return (
-        <nav>
-            <h3>Button placeholder</h3>
-            {/* Add links or content here later */}
-        </nav>
-    );
+﻿type ButtonProps = {
+  label: string;
+  onClick?: () => void;
+  isActive?: boolean;
+};
+
+export function Button({ label, onClick, isActive }: ButtonProps) {
+  return (
+    <button
+      className={`btn${isActive ? " btn--active" : ""}`}
+      type='button'
+      onClick={onClick}
+    >
+      {label}
+    </button>
+  );
 }

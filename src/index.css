@@ -3,6 +3,9 @@
   line-height: 1.5;
   font-weight: 400;
 
+  width: 100vw;
+  height: 100vh;
+
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -16,6 +19,7 @@
   --color-secondary: #b1cdff;
   --color-tertiary: #639bff;
   --color-accent: #3d7ef1;
+  --color-hover: #5392ff;
 
   --font-primary: "ThaleahFat", system-ui;
   --font-secondary: "Roboto", system-ui, Helvetica, Arial, sans-serif;
@@ -33,29 +37,27 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center; /* center #root horizontally */
+  align-items: center; /* center #root vertically */
   min-width: 320px;
   min-height: 100vh;
 }
 
 h1 {
+  font-family: var(--font-primary);
   font-size: 3.2em;
   line-height: 1.1;
 }
 
 button {
-  border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
+  font-size: 2.2em;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
@@ -77,8 +79,77 @@ button:focus-visible {
 
 @font-face {
   font-family: "ThaleahFat";
-  src: url("/fonts/ThaleahFat.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+  src: url("/fonts/ThaleahFat.ttf");
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  border: 4px solid #ffffff;
+  background-image: linear-gradient(
+    0deg,
+    /* accent band */ var(--color-accent) 0%,
+    var(--color-accent) 12%,
+    /* tertiary band */ var(--color-tertiary) 12%,
+    var(--color-tertiary) 88%,
+    /* secondary band */ var(--color-secondary) 88%,
+    var(--color-secondary) 100%
+  );
+  color: #ffffff;
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: border-color 0.25s ease, background-image 0.25s ease,
+    transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  background-image: linear-gradient(
+    0deg,
+    /* accent band */ var(--color-accent) 0%,
+    var(--color-accent) 12%,
+    /* tertiary band */ var(--color-hover) 12%,
+    var(--color-hover) 88%,
+    /* secondary band */ var(--color-secondary) 88%,
+    var(--color-secondary) 100%
+  );
+}
+
+.btn:active,
+.btn:focus-visible {
+  background-image: none;
+  background-color: var(--color-accent);
+  outline: none;
+}
+
+.btn--active,
+.btn--active:hover {
+  box-shadow: 0 0 0 2px var(--color-primary);
+  z-index: 1;
+  background-color: var(--color-accent);
+  background-image: none;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  /* overlap button borders so they don't look doubled */
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.navbar .btn {
+  flex: 1 1 0;
+  min-width: 0; /* allow buttons to shrink evenly on small screens */
+}
+
+.navbar .btn:not(:first-child) {
+  margin-left: -4px;
 }

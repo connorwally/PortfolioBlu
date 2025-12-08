@@ -1,42 +1,108 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.background {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bg-1,
+.bg-2,
+.bg-3,
+.bg-4,
+.bg-5,
+.bg-6 {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  image-rendering: pixelated;
+}
+
+.bg-1 {
+  z-index: 1;
+}
+
+.bg-2 {
+  z-index: 2;
+}
+
+.bg-3 {
+  z-index: 3;
+}
+
+.bg-4 {
+  z-index: 4;
+}
+
+.bg-5 {
+  z-index: 5;
+}
+
+.bg-6 {
+  z-index: 6;
+}
+
+.container {
+  position: relative;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  color: #ffffff;
+  gap: 0;
+  background-color: var(--color-secondary);
+  margin: auto;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container h1 {
+  margin: 0;
+  font-size: clamp(2.75rem, 5vw, 4rem);
+  letter-spacing: 0.08em;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container h2 {
+  margin-top: 0.75rem;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 400;
+  opacity: 0.9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.content {
+  outline: 4px solid var(--color-primary);
+  outline-offset: -4px;
+  width: 100%;
+  transition: margin 0.35s ease, transform 0.35s ease, opacity 0.35s ease;
 }
 
-.card {
-  padding: 2em;
+.container--home .content {
+  /* Content sits above navbar, overlap its top border slightly */
+  margin: 0 0 -4px 0;
 }
 
-.read-the-docs {
-  color: #888;
+.container--section .content {
+  /* Content sits below navbar, overlap its bottom border slightly */
+  margin: -4px 0 0 0;
+}
+
+.container--home .content {
+  order: 1;
+  transform: translateY(0);
+}
+
+.container--home .navbar {
+  order: 2;
+  transform: translateY(0);
+}
+
+.container--section .content {
+  order: 2;
+  transform: translateY(10px);
+}
+
+.container--section .navbar {
+  order: 1;
+  transform: translateY(-10px);
 }
