@@ -1,3 +1,11 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -23,6 +31,9 @@
 
   --font-primary: "ThaleahFat", system-ui;
   --font-secondary: "Roboto", system-ui, Helvetica, Arial, sans-serif;
+
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -58,10 +69,6 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
@@ -139,8 +146,7 @@ button:focus-visible {
   gap: 0;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 1000px;
+  width: 1000px;
   margin: 0 auto;
   transition: transform 0.35s ease, opacity 0.35s ease;
 }

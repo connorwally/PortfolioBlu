@@ -53,6 +53,8 @@
   color: #ffffff;
   background-color: var(--color-secondary);
   margin: auto;
+  outline: 4px solid var(--color-primary);
+  outline-offset: -4px;
 }
 
 .title-stack {
@@ -100,6 +102,7 @@
 .home-title {
   font-size: 6rem;
   --outline-width: 6px;
+  margin-top: 1rem;
 }
 
 .title-shadow {
@@ -109,7 +112,7 @@
   background-color: var(--color-tertiary);
   z-index: 0;
   bottom: 0;
-  transform: translateY(0.05rem);
+  transform: translateY(-0.4rem);
 }
 
 .title-shadow--left {
@@ -128,24 +131,13 @@
   font-size: 3rem;
   margin: 0;
   line-height: 1;
+  margin-bottom: 1rem;
 }
 
 .content {
-  outline: 4px solid var(--color-primary);
-  outline-offset: -4px;
-  width: 100%;
+  width: 1000px;
   transition: margin 0.35s ease, transform 0.35s ease, opacity 0.35s ease;
-  padding: 2rem 0 2rem 0;
-}
-
-.container--home .content {
-  /* Content sits above navbar, overlap its top border slightly */
-  margin: 0 0 -4px 0;
-}
-
-.container--section .content {
-  /* Content sits below navbar, overlap its bottom border slightly */
-  margin: -4px 0 0 0;
+  padding: 1rem 0 1rem 0;
 }
 
 .container--home .content {

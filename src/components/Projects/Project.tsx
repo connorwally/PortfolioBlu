@@ -20,6 +20,9 @@ export function Project({
 }: ProjectProps) {
   return (
     <div className={`project${reverse ? " project--reverse" : ""}`}>
+      <div className='project-image'>
+        <img src={image} alt={imageAlt} />
+      </div>
       <div className='project-text'>
         <h2 className='project-name'>{name}</h2>
         <p className='project-description'>{description}</p>
@@ -27,9 +30,6 @@ export function Project({
           label='More'
           onClick={() => window.open(youtubeLink, "_blank")}
         />
-      </div>
-      <div className='project-image'>
-        <img src={image} alt={imageAlt} />
       </div>
     </div>
   );
