@@ -23,8 +23,8 @@ export default function About() {
       </div>
       <div className='about-text about-text-2'>
         Outside of coding, I’m into cars (JDM) and spend too much time in online
-        games such as Overwatch 2, Guild Wars 2, Albion Online. I listen to alot
-        of house, trance and OST’s (Skyrim, Pokemon).
+        games such as Overwatch 2, Guild Wars 2 and Albion Online. I listen to
+        alot of house, trance and OST’s (Skyrim, Pokemon).
       </div>
       <div className='polaroids'>
         <Polaroid

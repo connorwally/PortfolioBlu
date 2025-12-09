@@ -67,11 +67,17 @@ function App() {
         ))}
       </div>
       <div
+        key={activeSection}
         className={`container ${
           isHome ? "container--home" : "container--section"
-        }`}
+        } ${isHome ? "container--reveal-up" : "container--reveal-down"}`}
       >
-        <div className={`content content--${activeSection.toLowerCase()}`}>
+        <div
+          key={activeSection}
+          className={`content content--${activeSection.toLowerCase()} ${
+            isHome ? "content--reveal-up" : "content--reveal-down"
+          }`}
+        >
           {renderContent()}
         </div>
         <Navbar

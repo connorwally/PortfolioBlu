@@ -55,6 +55,7 @@
   margin: auto;
   outline: 4px solid var(--color-primary);
   outline-offset: -4px;
+  overflow: hidden;
 }
 
 .title-stack {
@@ -136,27 +137,111 @@
 
 .content {
   width: 1000px;
-  transition: margin 0.5s ease-in-out, transform 0.5s ease-in-out,
-    opacity 0.5s ease-in-out;
   padding: 1rem 0 1rem 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .container--home .content {
   order: 1;
-  transform: translateY(0);
 }
 
 .container--home .navbar {
   order: 2;
-  transform: translateY(0);
 }
 
 .container--section .content {
   order: 2;
-  transform: translateY(10px);
 }
 
 .container--section .navbar {
   order: 1;
-  transform: translateY(-10px);
+}
+
+/* Reveal animations that "open" from the navbar */
+
+.content--reveal-up,
+.content--reveal-down {
+  animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+  animation-fill-mode: forwards;
+  will-change: clip-path, opacity;
+}
+
+/* Home: content sits above the navbar, so we reveal upward from the navbar */
+.content--reveal-up {
+  clip-path: inset(100% 0 0 0);
+  animation-name: revealFromNavbarUp;
+}
+
+@keyframes revealFromNavbarUp {
+  from {
+    clip-path: inset(100% 0 0 0);
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+/* Container reveal so the blue background panel opens too */
+
+.container--reveal-up,
+.container--reveal-down {
+  animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+  animation-fill-mode: forwards;
+  will-change: clip-path, opacity;
+}
+
+/* Home: navbar is at the bottom of the card, so reveal upward from the bottom edge */
+.container--reveal-up {
+  clip-path: inset(100% 0 0 0);
+  animation-name: containerRevealUp;
+}
+
+@keyframes containerRevealUp {
+  from {
+    clip-path: inset(100% 0 0 0);
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+/* Sections: navbar is at the top of the card, so reveal downward from the top edge */
+.container--reveal-down {
+  clip-path: inset(0 0 100% 0);
+  animation-name: containerRevealDown;
+}
+
+@keyframes containerRevealDown {
+  from {
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+/* Sections: content sits below the navbar, so we reveal downward */
+.content--reveal-down {
+  clip-path: inset(0 0 100% 0);
+  animation-name: revealFromNavbarDown;
+}
+
+@keyframes revealFromNavbarDown {
+  from {
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
 }
