@@ -5,7 +5,7 @@ type NavbarProps = {
   onSelect: (section: string) => void;
 };
 
-const SECTIONS = ["Home", "Projects", "About", "Contact", "Github"] as const;
+const SECTIONS = ["About", "Projects", "Home", "Contact", "Github"] as const;
 
 export function Navbar({ activeSection, onSelect }: NavbarProps) {
   return (

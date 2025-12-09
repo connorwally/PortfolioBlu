@@ -45,29 +45,89 @@
 
 .container {
   position: relative;
-  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #ffffff;
-  gap: 0;
   background-color: var(--color-secondary);
   margin: auto;
 }
 
-.container h1 {
-  margin: 0;
-  font-size: clamp(2.75rem, 5vw, 4rem);
-  letter-spacing: 0.08em;
+.title-stack {
+  position: relative;
+  display: inline-block;
 }
 
-.container h2 {
-  margin-top: 0.75rem;
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
-  font-weight: 400;
-  opacity: 0.9;
+.title-text {
+  margin: 0;
+  font-size: 4rem;
+  line-height: 0.8;
+}
+
+.title-text--bg {
+  --outline-width: 4px;
+  --outline-width-negative: calc(-1 * var(--outline-width));
+  position: absolute;
+  color: #ffffff;
+  z-index: 1;
+  text-shadow: var(--outline-width-negative) var(--outline-width-negative) 0
+      var(--color-primary),
+    var(--outline-width) var(--outline-width-negative) 0 var(--color-primary),
+    var(--outline-width-negative) var(--outline-width) 0 var(--color-primary),
+    var(--outline-width) var(--outline-width) 0 var(--color-primary);
+}
+
+.title-text--fg {
+  position: relative;
+  z-index: 2;
+  background-image: linear-gradient(
+    0deg,
+    /* accent band */ var(--color-accent) 0%,
+    var(--color-accent) 33%,
+    /* tertiary band */ var(--color-tertiary) 33%,
+    var(--color-tertiary) 71%,
+    /* secondary band */ var(--color-secondary) 71%,
+    var(--color-secondary) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-title {
+  font-size: 6rem;
+  --outline-width: 6px;
+}
+
+.title-shadow {
+  position: absolute;
+  border: 0;
+  height: 10px;
+  background-color: var(--color-tertiary);
+  z-index: 0;
+  bottom: 0;
+  transform: translateY(0.05rem);
+}
+
+.title-shadow--left {
+  width: 51.2%;
+  left: -6px;
+}
+
+.title-shadow--right {
+  width: 45.7%;
+  right: 0;
+}
+
+.subtitle {
+  font-family: var(--font-primary);
+  color: var(--color-primary);
+  font-size: 3rem;
+  margin: 0;
+  line-height: 1;
 }
 
 .content {
@@ -75,6 +135,7 @@
   outline-offset: -4px;
   width: 100%;
   transition: margin 0.35s ease, transform 0.35s ease, opacity 0.35s ease;
+  padding: 2rem 0 2rem 0;
 }
 
 .container--home .content {
