@@ -3,9 +3,9 @@ import { useState } from "react";
 import "./App.css";
 import { Navbar } from "./components/Navbar.tsx";
 import { Contact } from "./components/Contact.tsx";
-import { Polaroid } from "./components/Polaroid.tsx";
 import { ProjectList } from "./components/Projects/ProjectList.tsx";
 import { layers, ParallaxLayer } from "./view/parallax.tsx";
+import About from "./components/About/About.tsx";
 
 function App() {
   const [activeSection, setActiveSection] = useState("Home");
@@ -16,7 +16,7 @@ function App() {
       case "Projects":
         return <ProjectList />;
       case "About":
-        return <Polaroid />;
+        return <About />;
       case "Contact":
         return <Contact />;
       case "Github":

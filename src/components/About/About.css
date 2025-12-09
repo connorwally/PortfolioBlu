@@ -1,0 +1,35 @@
+.about-content {
+  width: 85%;
+  margin: 0 auto 0 auto;
+  padding-bottom: 2rem;
+}
+
+.about-title {
+  text-align: left;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.about-title-shadow {
+  width: 18.8%;
+  transform: translateY(-0.1rem);
+  left: -4px;
+}
+
+.about-text {
+  font-size: 1.25rem;
+  font-family: var(--font-secondary);
+  text-align: left;
+  color: var(--color-accent);
+}
+
+.about-text-2 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.polaroids {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
