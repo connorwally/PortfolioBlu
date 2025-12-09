@@ -33,14 +33,16 @@ export function ParallaxLayer({ className, image, speed }: ParallaxLayerProps) {
       const targetWidth = parentRect?.width || window.innerWidth || 1;
       const targetHeight = parentRect?.height || window.innerHeight || 1;
 
-      const scaleForHeight = targetHeight / img.naturalHeight / 1.5;
-      const scaleForWidth = targetWidth / img.naturalWidth / 1.5;
+      // Scale so the layer covers the viewport/container in both
+      // dimensions without over-zooming beyond what's needed.
+      // Use a floating-point scale (no integer snapping) so 4K and 1080p
+      // both get a "just big enough" image without large jumps.
+      const scaleForHeight = targetHeight / img.naturalHeight;
+      const scaleForWidth = targetWidth / img.naturalWidth;
       const minScale = Math.max(scaleForHeight, scaleForWidth);
 
-      const integerScale = Math.max(1, Math.ceil(minScale));
-
-      const tileWidth = img.naturalWidth * integerScale;
-      const scaledHeight = img.naturalHeight * integerScale;
+      const tileWidth = img.naturalWidth * minScale;
+      const scaledHeight = img.naturalHeight * minScale;
 
       tileWidthRef.current = tileWidth;
 
