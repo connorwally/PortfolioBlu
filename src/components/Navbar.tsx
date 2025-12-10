@@ -10,7 +10,7 @@ type NavbarProps = {
 const SECTIONS = ["About", "Projects", "Home", "Contact"] as const;
 
 const GITHUB_URL = "https://github.com/connorwally";
-const YOUTUBE_URL = "https://youtube.com/@your-channel";
+const YOUTUBE_URL = "https://www.youtube.com/@wallydotdev";
 
 export function Navbar({ activeSection, onSelect }: NavbarProps) {
   return (

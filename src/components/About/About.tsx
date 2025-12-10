@@ -13,18 +13,13 @@ export default function About() {
         <hr className='about-title-shadow title-shadow'></hr>
       </div>
       <div className='about-text about-text-1'>
-        I’m a developer who enjoys game dev and full-stack projects, focusing on
-        scalable systems and real-time multiplayer design. I build primarily in
-        C#, .NET and Unity for full-stack, networking, and game mechanics, but
-        I’m adaptable and comfortable switching into TypeScript or other
-        languages and tools depending on which is the best fit. I like designing
-        the mechanics and structures behind social, open-world, and multiplayer
-        experiences.
+        I enjoy building online games and full-stack web applications. My top 3
+        languages are C#, TypeScript and Java. I like designing systems and
+        structures for scalability.
       </div>
       <div className='about-text about-text-2'>
-        Outside of coding, I’m into cars (JDM) and spend too much time in online
-        games such as Overwatch 2, Guild Wars 2 and Albion Online. I listen to
-        alot of house, trance and OST’s (Skyrim, Pokemon).
+        I’m into japanese cars and spend too much time playing Overwatch 2,
+        Guild Wars 2 and Albion Online. I listen to house and trance.
       </div>
       <div className='polaroids'>
         <Polaroid
