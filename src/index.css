@@ -93,6 +93,7 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  height: 70px;
   padding: 0.75rem 1.75rem;
   border: 4px solid #ffffff;
   background-image: linear-gradient(
@@ -110,6 +111,17 @@ button {
   letter-spacing: 0.08em;
   transition: border-color 0.25s ease, background-image 0.25s ease,
     transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn__icon {
+  /* Make icon noticeably larger without affecting button layout */
+  width: 2.25rem;
+  height: 2.25rem;
+  image-rendering: pixelated;
+}
+
+.btn__label {
+  margin-left: 0.5rem;
 }
 
 .btn:hover {
@@ -154,6 +166,10 @@ button {
 .navbar .btn {
   flex: 1 1 0;
   min-width: 0; /* allow buttons to shrink evenly on small screens */
+}
+
+.navbar .btn.btn--icon {
+  flex: 0.25 0.25 0;
 }
 
 .navbar .btn:not(:first-child) {
