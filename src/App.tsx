@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import "./App.css";
 import { Navbar } from "./components/Navbar.tsx";
-import { Contact } from "./components/Contact.tsx";
+import { Contact } from "./components/Contact/Contact.tsx";
 import { ProjectList } from "./components/Projects/ProjectList.tsx";
 import { layers, ParallaxLayer } from "./view/parallax.tsx";
 import About from "./components/About/About.tsx";
@@ -25,7 +25,7 @@ function App() {
             <h3>Github</h3>
             <p>
               <a
-                href='https://github.com/your-github-username'
+                href='https://github.com/connorwally'
                 target='_blank'
                 rel='noreferrer'
               >

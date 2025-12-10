@@ -1,0 +1,47 @@
+.contact-content {
+  width: 85%;
+  margin: 0 auto 0 auto;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+.contact-title-shadow {
+  width: 26%;
+  transform: translateY(-0.1rem);
+  left: -4px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 8px 0 0 #8ab4ff, /* right */ -4px 8px 0 0 #8ab4ff;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: var(--color-primary); /* or any color you want */
+  border: none;
+  padding: 0.5rem;
+  resize: none;
+  outline: 4px solid var(--color-tertiary);
+  font-family: var(--font-primary);
+  color: var(--color-tertiary);
+  font-size: 2rem;
+  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-secondary);
+}
+
+.contact-form .btn {
+  width: 120px;
+  height: 65px;
+}
