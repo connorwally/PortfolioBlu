@@ -5,6 +5,12 @@
   padding-top: 3rem;
 }
 
+.contact-title {
+  text-align: left;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
 .contact-title-shadow {
   width: 26%;
   transform: translateY(-0.1rem);
@@ -44,4 +50,34 @@
 .contact-form .btn {
   width: 120px;
   height: 65px;
+}
+
+/* ---------------------------------------- */
+/* Responsive layout                        */
+/* ---------------------------------------- */
+
+@media (max-width: 1000px) {
+  .contact-content {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+
+  .contact-title-shadow {
+    width: 165px;
+    transform: translateY(-0.1rem);
+    left: -3px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 1.3rem;
+  }
+
+  .contact-form .btn {
+    width: 100%;
+    max-width: none;
+  }
 }

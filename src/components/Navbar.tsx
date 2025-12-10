@@ -9,7 +9,6 @@ type NavbarProps = {
 
 const SECTIONS = ["About", "Projects", "Home", "Contact"] as const;
 
-// TODO: Replace these with your real profile URLs when ready.
 const GITHUB_URL = "https://github.com/connorwally";
 const YOUTUBE_URL = "https://youtube.com/@your-channel";
 

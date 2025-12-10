@@ -79,3 +79,62 @@
   border: 2px solid #ffffff;
   margin: 0.5rem 0 1rem 0;
 }
+
+/* Ensure project images scale nicely within their container */
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------------------------------------- */
+/* Responsive layout                        */
+/* ---------------------------------------- */
+
+@media (max-width: 1000px) {
+  .projects-content {
+    width: 100%;
+  }
+
+  .project {
+    flex-direction: column;
+    height: auto;
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .projects-title-shadow {
+    width: 194px;
+  }
+
+  .project--reverse {
+    flex-direction: column;
+  }
+
+  .project-image {
+    width: 100%;
+    height: 190px;
+  }
+
+  .project-text {
+    width: 100%;
+    margin: 0.75rem 0.75rem 1.25rem;
+  }
+
+  .project-name {
+    font-size: 1.9rem;
+  }
+
+  .project-description {
+    font-size: 0.98rem;
+  }
+
+  .project .btn {
+    width: 100%;
+    max-width: 170px;
+    height: 44px;
+    font-size: 1.2rem;
+    margin-top: 0.75rem;
+  }
+}

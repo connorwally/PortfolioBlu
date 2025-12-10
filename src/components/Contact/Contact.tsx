@@ -4,7 +4,7 @@ import "./Contact.css";
 export function Contact() {
   return (
     <div className='contact-content'>
-      <div className='title-stack projects-title'>
+      <div className='title-stack contact-title'>
         <h1 className='title-text title-text--bg'>Contact</h1>
         <h1 className='title-text title-text--fg'>Contact</h1>
         <hr className='contact-title-shadow title-shadow'></hr>

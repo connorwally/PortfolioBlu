@@ -24,3 +24,22 @@
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
+
+/* ---------------------------------------- */
+/* Responsive tweaks                        */
+/* ---------------------------------------- */
+
+@media (max-width: 900px) {
+  .polaroid {
+    height: auto;
+    padding-bottom: 0.75rem;
+  }
+
+  .polaroid-image {
+    height: auto;
+  }
+
+  .polaroid-label {
+    font-size: 1.25rem;
+  }
+}

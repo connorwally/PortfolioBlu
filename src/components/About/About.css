@@ -33,3 +33,27 @@
   flex-direction: row;
   gap: 1rem;
 }
+
+/* ---------------------------------------- */
+/* Responsive layout                        */
+/* ---------------------------------------- */
+
+@media (max-width: 1000px) {
+  .about-content {
+    width: 100%;
+  }
+
+  .about-title-shadow {
+    width: 120px;
+    transform: translateY(-0.1rem);
+    left: -3px;
+  }
+
+  .about-text {
+    font-size: 1.05rem;
+  }
+
+  .polaroids {
+    flex-direction: column;
+  }
+}

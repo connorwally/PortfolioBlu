@@ -102,8 +102,8 @@
 
 .home-title {
   font-size: 6rem;
-  --outline-width: 6px;
   margin-top: 1rem;
+  --outline-width: 6px;
 }
 
 .title-shadow {
@@ -233,6 +233,44 @@
 .content--reveal-down {
   clip-path: inset(0 0 100% 0);
   animation-name: revealFromNavbarDown;
+}
+
+/* ---------------------------------------- */
+/* Responsive container & typography        */
+/* ---------------------------------------- */
+
+@media (max-width: 1000px) {
+  .title-text {
+    font-size: 3.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .title-text--bg {
+    --outline-width: 3px;
+  }
+
+  .title-shadow {
+    height: 6px;
+    transform: translateY(-0.1rem);
+  }
+
+  .title-text {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+
+  .container {
+    width: calc(100% - 1.5rem);
+    margin: 0.75rem;
+  }
+
+  .content {
+    padding: 1.25rem 1rem 1.5rem;
+    width: 100%;
+  }
 }
 
 @keyframes revealFromNavbarDown {
