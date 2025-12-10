@@ -1,5 +1,12 @@
 ﻿import { Button } from "../Button";
 import "./Projects.css";
+import { ProjectMetaIcon } from "./ProjectMetaIcon";
+
+type ProjectMetaIconConfig = {
+  label?: string;
+  iconSrc?: string;
+  iconAlt?: string;
+};
 
 type ProjectProps = {
   name: string;
@@ -8,6 +15,7 @@ type ProjectProps = {
   description: string;
   youtubeLink: string;
   reverse?: boolean;
+  metaIcons?: ProjectMetaIconConfig[];
 };
 
 export function Project({
@@ -17,6 +25,7 @@ export function Project({
   description,
   youtubeLink,
   reverse,
+  metaIcons,
 }: ProjectProps) {
   return (
     <div className={`project${reverse ? " project--reverse" : ""}`}>
@@ -26,10 +35,24 @@ export function Project({
       <div className='project-text'>
         <h2 className='project-name'>{name}</h2>
         <p className='project-description'>{description}</p>
-        <Button
-          label='More'
-          onClick={() => window.open(youtubeLink, "_blank")}
-        />
+        {metaIcons && metaIcons.length > 0 && (
+          <div className='project-meta-icons'>
+            {metaIcons.map((metaIcon, index) => (
+              <ProjectMetaIcon
+                key={index}
+                label={metaIcon.label}
+                iconSrc={metaIcon.iconSrc}
+                iconAlt={metaIcon.iconAlt}
+              />
+            ))}
+          </div>
+        )}
+        <div className='project-actions'>
+          <Button
+            label='More'
+            onClick={() => window.open(youtubeLink, "_blank")}
+          />
+        </div>
       </div>
     </div>
   );

@@ -18,6 +18,14 @@ export function ProjectList() {
           imageAlt='Project 1 image'
           description={spriteWarDescription}
           youtubeLink='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+          metaIcons={[
+            { label: "Solo" },
+            { label: "C#" },
+            { label: ".NET" },
+            { label: "TS" },
+            { label: "Vue" },
+            { label: "pixi.js" },
+          ]}
         />
         <Project
           name='Brawl champions'
@@ -26,6 +34,12 @@ export function ProjectList() {
           reverse={true}
           description={spriteWarDescription}
           youtubeLink='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+          metaIcons={[
+            { label: "Solo" },
+            { label: "C#" },
+            { label: "UNITY" },
+            { label: "NFE" },
+          ]}
         />
         <Project
           name='Project June'
@@ -33,6 +47,12 @@ export function ProjectList() {
           imageAlt='Project 1 image'
           description={spriteWarDescription}
           youtubeLink='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+          metaIcons={[
+            { label: "Solo" },
+            { label: "C#" },
+            { label: "UNITY" },
+            { label: "Mirror" },
+          ]}
         />
       </div>
     </div>
