@@ -8,14 +8,20 @@ type ProjectMetaIconConfig = {
   iconAlt?: string;
 };
 
+type ProjectActionConfig = {
+  label: string;
+  href: string;
+};
+
 type ProjectProps = {
   name: string;
   image: string;
   imageAlt: string;
   description: string;
-  youtubeLink: string;
+  youtubeLink?: string;
   reverse?: boolean;
   metaIcons?: ProjectMetaIconConfig[];
+  actions?: ProjectActionConfig[];
 };
 
 export function Project({
@@ -26,7 +32,15 @@ export function Project({
   youtubeLink,
   reverse,
   metaIcons,
+  actions,
 }: ProjectProps) {
+  const actionsToRender: ProjectActionConfig[] =
+    actions && actions.length > 0
+      ? actions
+      : youtubeLink
+      ? [{ label: "More", href: youtubeLink }]
+      : [];
+
   return (
     <div className={`project${reverse ? " project--reverse" : ""}`}>
       <div className='project-image'>
@@ -47,12 +61,13 @@ export function Project({
             ))}
           </div>
         )}
-        <div className='project-actions'>
-          <Button
-            label='More'
-            onClick={() => window.open(youtubeLink, "_blank")}
-          />
-        </div>
+        {actionsToRender.length > 0 && (
+          <div className='project-actions'>
+            {actionsToRender.map((action, index) => (
+              <Button key={index} label={action.label} href={action.href} />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

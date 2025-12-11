@@ -23,7 +23,16 @@ export function ProjectList() {
           image='project1.png'
           imageAlt='Project 1 image'
           description={spriteWarDescription}
-          youtubeLink='https://www.youtube.com/@wallydotdev'
+          actions={[
+            {
+              label: "Play",
+              href: "https://spritewar.io",
+            },
+            {
+              label: "More",
+              href: "https://www.youtube.com/@wallydotdev",
+            },
+          ]}
           metaIcons={[
             { label: "Solo" },
             { label: "C#" },

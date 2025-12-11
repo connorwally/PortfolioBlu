@@ -25,7 +25,7 @@
 
 .project {
   display: flex;
-  height: 220px;
+  height: 215px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -81,6 +81,11 @@
 
 .project-actions {
   margin: 0.2rem 0 0.5rem 0;
+  gap: 0.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-meta-icons {
@@ -93,7 +98,7 @@
 
 .project-meta-icon {
   display: inline-flex;
-  height: 35px;
+  height: 28px;
   align-items: center;
   justify-content: center;
   min-width: 1.5rem;
@@ -109,8 +114,8 @@
 }
 
 .project-meta-icon__image {
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   image-rendering: pixelated;
 }
 

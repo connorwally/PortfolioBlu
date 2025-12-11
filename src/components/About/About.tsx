@@ -18,7 +18,7 @@ export default function About() {
         is C#.
       </div>
       <div className='about-text about-text-2'>
-        I’m into japanese cars and spend too much time playing games like
+        I’m into Japanese cars and spend too much time playing games like
         Overwatch 2, Guild Wars 2 and Albion Online. I listen to house and
         trance.
       </div>
