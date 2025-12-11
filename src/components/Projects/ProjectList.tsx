@@ -1,4 +1,7 @@
 import { Project } from "./Project";
+import spriteWarImage from "@/assets/projects/SpriteWar.png";
+import brawlChampionsImage from "@/assets/projects/Project May.png";
+import projectJuneImage from "@/assets/projects/Project June.png";
 
 const spriteWarDescription =
   "A browser based, large-scale multiplayer 2D RTS where players command units, gather resources, and defend their castles. It uses client-side pathfinding, ECS-style server logic, and dynamic spawning to support smooth, competitive play between many players.";
@@ -20,7 +23,7 @@ export function ProjectList() {
       <div className='projects-list'>
         <Project
           name='Spritewar.io'
-          image='project1.png'
+          image={spriteWarImage}
           imageAlt='Project 1 image'
           description={spriteWarDescription}
           actions={[
@@ -44,7 +47,7 @@ export function ProjectList() {
         />
         <Project
           name='Brawl champions'
-          image='project1.png'
+          image={brawlChampionsImage}
           imageAlt='Project 1 image'
           reverse={true}
           description={brawlChampionsDescription}
@@ -58,7 +61,7 @@ export function ProjectList() {
         />
         <Project
           name='Project June'
-          image='project1.png'
+          image={projectJuneImage}
           imageAlt='Project 1 image'
           description={projectJuneDescription}
           youtubeLink='https://www.youtube.com/@wallydotdev'
