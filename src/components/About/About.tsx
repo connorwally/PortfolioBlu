@@ -13,13 +13,14 @@ export default function About() {
         <hr className='about-title-shadow title-shadow'></hr>
       </div>
       <div className='about-text about-text-1'>
-        I enjoy building online games and full-stack web applications. My top 3
-        languages are C#, TypeScript and Java. I like designing systems and
-        structures for scalability.
+        I enjoy building online games and full-stack web applications with
+        foundations for high user counts and scalability. My favourite language
+        is C#.
       </div>
       <div className='about-text about-text-2'>
-        I’m into japanese cars and spend too much time playing Overwatch 2,
-        Guild Wars 2 and Albion Online. I listen to house and trance.
+        I’m into japanese cars and spend too much time playing games like
+        Overwatch 2, Guild Wars 2 and Albion Online. I listen to house and
+        trance.
       </div>
       <div className='polaroids'>
         <Polaroid

@@ -169,7 +169,7 @@ button {
 }
 
 .navbar .btn.btn--icon {
-  flex: 0.25 0.25 0;
+  flex: 0.01 0.01 0;
 }
 
 .navbar .btn:not(:first-child) {

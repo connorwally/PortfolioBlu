@@ -1,7 +1,13 @@
 import { Project } from "./Project";
 
 const spriteWarDescription =
-  "Spritewar is a browser based MMORTS game built using Typescript on the front-end and C# + Dotnet on the backend. The backend is built for scale and can handle thousands of users concurrently.";
+  "A browser based, large-scale multiplayer 2D RTS where players command units, gather resources, and defend their castles. It uses client-side pathfinding, ECS-style server logic, and dynamic spawning to support smooth, competitive play between many players.";
+
+const brawlChampionsDescription =
+  "An unreleased 16v16 team-based class arena game where players choose from five roles and fight over three control points. It features a modular ability-based combat system and custom multiplayer networking with synchronized state across all clients.";
+
+const projectJuneDescription =
+  "A 2D top-down open-world PvP game where players choose weapons, fight monsters, level up, gather resources, and build. It features custom ability-driven combat and Mirror-based multiplayer, developed while learning Unity and networking fundamentals";
 
 export function ProjectList() {
   return (
@@ -17,7 +23,7 @@ export function ProjectList() {
           image='project1.png'
           imageAlt='Project 1 image'
           description={spriteWarDescription}
-          youtubeLink='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+          youtubeLink='https://www.youtube.com/@wallydotdev'
           metaIcons={[
             { label: "Solo" },
             { label: "C#" },
@@ -32,21 +38,21 @@ export function ProjectList() {
           image='project1.png'
           imageAlt='Project 1 image'
           reverse={true}
-          description={spriteWarDescription}
-          youtubeLink='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+          description={brawlChampionsDescription}
+          youtubeLink='https://www.youtube.com/@wallydotdev'
           metaIcons={[
             { label: "Solo" },
             { label: "C#" },
             { label: "UNITY" },
-            { label: "NFE" },
+            { label: "NGO" },
           ]}
         />
         <Project
           name='Project June'
           image='project1.png'
           imageAlt='Project 1 image'
-          description={spriteWarDescription}
-          youtubeLink='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+          description={projectJuneDescription}
+          youtubeLink='https://www.youtube.com/@wallydotdev'
           metaIcons={[
             { label: "Solo" },
             { label: "C#" },
