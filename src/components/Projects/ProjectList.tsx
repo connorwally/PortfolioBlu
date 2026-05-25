@@ -69,7 +69,7 @@ export function ProjectList() {
             { label: "Solo" },
             { label: "C#" },
             { label: "UNITY" },
-            { label: "Mirror" },
+            { label: "Fusion" },
           ]}
         />
       </div>
